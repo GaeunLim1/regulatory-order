@@ -1,10 +1,10 @@
-title: AI Governance / Regulatory Order
+title: Regulatory Order
 description: >-
-  A research site on how export-control and national-security rules try to hold a new technology, read through who designed its categories, where they left a gap, and who ends up carrying the difference across selected cases.
+  A research site on how export-control and national-security rules try to hold a new technology, read through who holds the authority to write its categories, where that authority left a gap, and who ends up carrying the difference across selected cases.
 lang: en
 
 baseurl: /regulatory-order
-url: https://gaeunlim01.github.io
+url: https://gaeunlim1.github.io
 
 # GitHub Pages builds this with its own Jekyll. No Actions workflow required.
 markdown: kramdown
