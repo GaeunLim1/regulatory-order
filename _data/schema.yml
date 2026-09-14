@@ -1,45 +1,53 @@
-# Current analytical frame
-#
-# Not a fixed model with named stages. Three questions recur across cases,
-# in roughly this order of attention, each guided by an open question rather
-# than a required set of sub-fields. A case may answer one at length and
-# another in a sentence — see docs/case-template.yml for the drafting prompts.
+# Master frame: four layers, in order.
+# Object of the rule and Convergence carry fixed types. Design Layer crosses
+# two independent axes. Cost Layer carries no types, a matrix of firm-level
+# variables, filled before any outcome is known.
 
-design_vs_interpretation:
-  note: >
-    Who wrote the operative categories in general terms (usually a
-    legislature, usually before the case's situation existed), and who —
-    an agency, a regulator, a company reading its own obligations — only
-    gets to rule on whether a new situation fits inside them.
+object_of_the_rule:
+  types: [attribute-based, relational, conduct-based]
   open_question: >
-    What body designed the categories this case rests on, and what
-    different body only interprets them?
+    What does the text name as its target: a measured attribute, a position
+    in a network, or a future conduct condition?
 
-the_gap:
-  note: >
-    Where the design/interpretation split above left something new enough
-    that nobody had built a category for it yet.
+design_layer:
+  axes:
+    scope: [intra vires, boundary redraw]
+    trigger: [numeric, conduct]
   open_question: >
-    What about this technology or use sits outside every existing category,
-    and since when?
+    Does this rulemaking sit inside the article's delegated authority or
+    redraw that boundary? Does it fire on a threshold/date or on an actor's
+    conduct?
 
-actors:
-  note: >
-    The one that usually earns the most space on a case page — a per-actor
-    table (what authority they held / what happened instead) works better here
-    than a single paragraph.
+cost_layer:
+  types: []
+  variables: [distance from object, revenue share exposed, substitution available, prior positioning]
   open_question: >
-    For each actor moving into the gap: what did they mean to do, and what
-    happened instead? Who ends up carrying a difference they didn't sign
-    up for?
+    Firm by firm: how far from the named object, how much revenue is
+    exposed, is substitution available, and is the firm already positioning
+    before any outcome is known?
 
-case_character:
-  note: >
-    Optional, loose observation that doesn't need to be forced into one of
-    the three questions above.
+convergence:
+  types: [direct hit, reallocation, amplification, diffusion]
+  conduct_trigger_only: [latent, conditional reinstatement]
+  test:
+    - scale proportional to the trigger?
+    - if proportional, does the landing point match the named target?
+  open_question: >
+    Reading the Cost Layer matrix against the two-question test above, which
+    type does the outcome fall into?
 
 method_note:
   statement: >
     The frame is provisional. A case may expose a distinction that requires
     revision of the shared vocabulary; the case is not required to fit a
     pre-fixed taxonomy.
+
+construction_set:
+  note: >
+    Conditions a closed case must meet before it can be used to build or
+    test the Convergence types above, rather than only illustrate them.
+  conditions:
+    - the rule text already existed before the case
+    - execution was delayed or conditioned, not immediate
+    - the delay ended for reasons other than the firm's own misconduct
+    - the landing point is observable
