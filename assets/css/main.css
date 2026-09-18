@@ -1394,7 +1394,7 @@ details[open] > summary { margin-bottom: 0.6rem; }
 /* ==========================================================================
    COVER (index) — six blocks, trace-field signature. Scoped with .cov-*.
    ========================================================================== */
-.cov { padding-block: clamp(2.5rem, 6vw, 5rem) 0; }
+.cov { padding-block: clamp(2.5rem, 6vw, 5rem); }
 .cov__shell { max-width: var(--shell); margin-inline: auto; padding-inline: var(--gutter); }
 
 /* block 1 — title + axis */
