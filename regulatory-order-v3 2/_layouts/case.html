@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<section class="chero">
+  <div class="chero__shell">
+    <span class="chero__id">CASE {{ page.case_id | default: "N/A" }}</span>
+    <h1 class="chero__title">{{ page.title | default: "Case study" }}</h1>
+    {% if page.regulatory_subject %}
+    <p class="chero__subject">{{ page.regulatory_subject }}</p>
+    {% endif %}
+  </div>
+</section>
+
+{{ content }}
+
+<section class="csection">
+  <div class="chero__shell">
+    <p class="case-lib"><a href="{{ '/cases/' | relative_url }}">&#8592; Case library</a></p>
+  </div>
+</section>
