@@ -1,0 +1,67 @@
+# Watchlist item template. For an ongoing rule whose landing point has not
+# yet been observed (see _data/schema.yml for the four-layer frame this
+# extends, and cases/index.html for the four-condition case-library gate
+# this item has not yet cleared).
+#
+# This is a companion track to docs/case-template.yml, not a replacement.
+# The Object/Design/Cost layers are the same open questions as a case;
+# Convergence stays open until the outcome is observable; the response
+# layer below (not present in case-template.yml) is what a case does not
+# need, because a closed case has nothing left to act on.
+
+id:
+title:
+status: monitoring        # monitoring | escalated | promoted | closed-no-action
+regulatory_subject:
+
+# Promotion check — identical to cases/'s four-condition gate
+# (site/cases/index.html, site/_data/schema.yml#construction_set).
+# All four must be true before this item can move from watchlist/ to cases/.
+promotion_check:
+  text_exists: false             # does the rule text already exist?
+  execution_delayed: false       # is execution delayed or conditioned?
+  delay_resolved: false          # did the delay end for reasons other than the firm's own misconduct?
+  landing_point_observable: false  # is the outcome observable?
+
+object_of_the_rule:
+  open_question: What does the text name as its target, and what type — attribute-based, relational, conduct-based?
+  notes:
+
+design_layer:
+  open_question: Intra vires or boundary redraw? Numeric trigger or conduct trigger?
+  notes:
+
+cost_layer:
+  open_question: >
+    Firm by firm: distance from the object, revenue exposed, substitution
+    available, prior positioning. Fill this before the outcome is known.
+  notes:
+  data_sources:
+    # Record the basis for each judgment so different analysts reach
+    # comparable readings of the same matrix.
+    revenue_exposure:       # where the figure comes from (public filing / internal finance data / industry estimate)
+    substitution_criteria:  # how High/Medium/Low is decided (e.g. substitution lead time under N months = High)
+
+convergence:
+  status: pending          # pending | once resolved, replace with one of:
+                            # direct hit | reallocation | amplification | diffusion
+                            # (latent | conditional reinstatement, if conduct-triggered)
+  interim_reading:         # tentative read before resolution, optional
+  expected_resolution_date:
+
+# ── Response layer — not part of a closed case, required for a watchlist item ──
+response:
+  owner:
+  reviewer:
+  next_review_date:
+  distribution:             # e.g. internal only / shareable with partners
+  actions:
+    - action:                # e.g. file for license, secure alternate supply, legal review
+      due_date:
+      responsible:
+      status: not-started    # not-started | in-progress | done | blocked
+  escalation_trigger: >
+    Condition that forces immediate escalation regardless of next_review_date
+    (e.g. "effective date confirmed with no further stay").
+
+case_character:

@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<section class="chero">
+  <div class="chero__shell">
+    <span class="chero__id">WATCH {{ page.watch_id | default: "N/A" }}</span>
+    <h1 class="chero__title">{{ page.title | default: "Watchlist item" }}</h1>
+    {% if page.regulatory_subject %}
+    <p class="chero__subject">{{ page.regulatory_subject }}</p>
+    {% endif %}
+    <p class="tag-row" style="margin-top:0.75rem;">
+      <span class="tag tag--flag">status: {{ page.status | default: "monitoring" }}</span>
+      {% if page.expected_resolution_date %}
+      <span class="tag tag--dash">expected resolution: {{ page.expected_resolution_date }}</span>
+      {% endif %}
+    </p>
+  </div>
+</section>
+
+{{ content }}
+
+<section class="csection">
+  <div class="chero__shell">
+    <p class="case-lib"><a href="{{ '/watchlist/' | relative_url }}">&#8592; Watchlist</a></p>
+  </div>
+</section>
