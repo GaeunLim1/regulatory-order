@@ -1,4 +1,8 @@
-# Master frame: four layers, in order.
+# Master frame: this is not a legal validity check. It traces a rule from
+# the design intent behind it through firm-level exposure to the point a
+# company actually has to comply, independent of whether implementation
+# gets delayed or staged along the way.
+#
 # Object of the rule and Convergence carry fixed types. Design Layer crosses
 # two independent axes. Cost Layer carries no types, a matrix of firm-level
 # variables, filled before any outcome is known.
@@ -11,11 +15,26 @@ object_of_the_rule:
 
 design_layer:
   axes:
-    scope: [intra vires, boundary redraw]
+    scope: [scope-consistent, boundary-extending]
     trigger: [numeric, conduct]
+  scope_trace:
+    delegating_clause: >
+      The statute or article that grants authority for this rulemaking,
+      cited directly. What scope does it explicitly hand over?
+    stated_purpose: >
+      What the rulemaking body itself says it is doing: preamble, stated
+      rationale, legislative history.
+    operative_text_scope: >
+      What the rule's own operative text actually reaches, read on its own,
+      independent of the stated purpose.
+    delta: >
+      The gap between delegating_clause/stated_purpose and
+      operative_text_scope. No gap points to scope-consistent. A gap that
+      draws a new jurisdictional or definitional line points to
+      boundary-extending.
   open_question: >
     Does this rulemaking sit inside the article's delegated authority or
-    redraw that boundary? Does it fire on a threshold/date or on an actor's
+    extend that boundary? Does it fire on a threshold/date or on an actor's
     conduct?
 
 cost_layer:

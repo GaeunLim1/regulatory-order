@@ -19,7 +19,12 @@ object_of_the_rule:
   notes:
 
 design_layer:
-  open_question: Intra vires or boundary redraw? Numeric trigger or conduct trigger?
+  open_question: Scope-consistent or boundary-extending? Numeric trigger or conduct trigger?
+  scope_trace:
+    delegating_clause:      # the statute/article this rulemaking draws authority from, cited
+    stated_purpose:         # the rulemaking body's own stated rationale (preamble, legislative history)
+    operative_text_scope:   # what the rule's own text actually reaches
+    delta:                  # gap between the two above; this is what decides scope-consistent vs boundary-extending
   notes:
 
 cost_layer:
