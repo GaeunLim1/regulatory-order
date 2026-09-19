@@ -42,12 +42,4 @@ method_note:
     revision of the shared vocabulary; the case is not required to fit a
     pre-fixed taxonomy.
 
-construction_set:
-  note: >
-    Conditions a closed case must meet before it can be used to build or
-    test the Convergence types above, rather than only illustrate them.
-  conditions:
-    - the rule text already existed before the case
-    - execution was delayed or conditioned, not immediate
-    - the delay ended for reasons other than the firm's own misconduct
-    - the landing point is observable
+# Closed-case construction set removed from the site. The working set is watchlist.

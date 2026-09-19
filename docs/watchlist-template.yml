@@ -1,23 +1,14 @@
 # Watchlist item template. For an ongoing rule whose landing point has not
-# yet been observed (see _data/schema.yml for the four-layer frame this
-# extends, and cases/index.html for the four-condition case-library gate
-# this item has not yet cleared).
-#
-# This is a companion track to docs/case-template.yml, not a replacement.
-# The Object/Design/Cost layers are the same open questions as a case;
-# Convergence stays open until the outcome is observable; the response
-# layer below (not present in case-template.yml) is what a case does not
-# need, because a closed case has nothing left to act on.
+# yet been observed (see _data/schema.yml for the four-layer frame).
+# Convergence stays open until the outcome is observable. Response is required.
 
 id:
 title:
-status: monitoring        # monitoring | escalated | promoted | closed-no-action
+status: monitoring        # monitoring | escalated | closed-no-action
 regulatory_subject:
 
-# Promotion check — identical to cases/'s four-condition gate
-# (site/cases/index.html, site/_data/schema.yml#construction_set).
-# All four must be true before this item can move from watchlist/ to cases/.
-promotion_check:
+# Status check — landing point not yet observed.
+status_check:
   text_exists: false             # does the rule text already exist?
   execution_delayed: false       # is execution delayed or conditioned?
   delay_resolved: false          # did the delay end for reasons other than the firm's own misconduct?
