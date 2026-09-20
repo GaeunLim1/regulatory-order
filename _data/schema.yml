@@ -1,7 +1,7 @@
-# Master frame: this is not a legal validity check. It traces a rule from
-# the design intent behind it through firm-level exposure to the point a
-# company actually has to comply, independent of whether implementation
-# gets delayed or staged along the way.
+# Master frame: traces a rule from the design intent behind it through
+# firm-level exposure to the point a company actually has to comply,
+# independent of whether implementation gets delayed or staged along the
+# way.
 #
 # Object of the rule and Convergence carry fixed types. Design Layer crosses
 # two independent axes. Cost Layer carries no types, a matrix of firm-level
@@ -15,26 +15,25 @@ object_of_the_rule:
 
 design_layer:
   axes:
-    scope: [scope-consistent, boundary-extending]
+    scope: [within the existing line, redrawing the line]
     trigger: [numeric, conduct]
   scope_trace:
-    delegating_clause: >
-      The statute or article that grants authority for this rulemaking,
-      cited directly. What scope does it explicitly hand over?
-    stated_purpose: >
-      What the rulemaking body itself says it is doing: preamble, stated
-      rationale, legislative history.
-    operative_text_scope: >
-      What the rule's own operative text actually reaches, read on its own,
-      independent of the stated purpose.
-    delta: >
-      The gap between delegating_clause/stated_purpose and
-      operative_text_scope. No gap points to scope-consistent. A gap that
-      draws a new jurisdictional or definitional line points to
-      boundary-extending.
+    authorizing_text: >
+      The provision that hands the agency its job, and how far that job
+      runs. Cited directly, not summarized.
+    stated_aim: >
+      What the agency says it is doing: preamble, stated rationale,
+      legislative history.
+    operative_reach: >
+      Who the rule's own wording actually covers, read on its own,
+      independent of the stated aim.
+    gap: >
+      Mismatch between the grant, the stated aim, and the operative reach.
+      No mismatch points to within the existing line. A mismatch that pulls
+      in a new class of actor points to redrawing the line.
   open_question: >
-    Does this rulemaking sit inside the article's delegated authority or
-    extend that boundary? Does it fire on a threshold/date or on an actor's
+    Does this rulemaking sit inside the agency's authorizing text, or does
+    it redraw that line? Does it fire on a threshold/date or on an actor's
     conduct?
 
 cost_layer:
@@ -54,6 +53,12 @@ convergence:
   open_question: >
     Reading the Cost Layer matrix against the two-question test above, which
     type does the outcome fall into?
+  pre_landing: >
+    A type from this list is assigned only once the landing point is
+    observed. Before that, on a watchlist item, this layer stays pending;
+    if a forward look is useful, write it as a scenario against the Cost
+    Layer matrix (what changes under condition X), not as a type guessed in
+    advance.
 
 method_note:
   statement: >
