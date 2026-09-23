@@ -64,9 +64,6 @@ cost_layer:
     exposed, is substitution available, and is the firm already positioning
     before any outcome is known?
 
-convergence:
-  status: reserved
-
 method_note:
   statement: >
     The frame is provisional. A case may expose a distinction that requires
