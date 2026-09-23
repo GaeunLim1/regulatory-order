@@ -1,0 +1,71 @@
+# Master frame. Stage 1-2 read a single rule. Stage 3 reads multiple rules
+# together, when more than one applies. Stage 4 turns the reading into an
+# exposure matrix, informed by Stage 3.
+
+object_of_the_rule:
+  stage: 1
+  types: [attribute-based, relational, conduct-based]
+  open_question: >
+    What does the text name as its target: a measured attribute, a position
+    in a network, or a future conduct condition?
+
+design_layer:
+  stage: 2
+  axes:
+    scope: [within the existing line, redrawing the line]
+    trigger: [numeric, conduct]
+  scope_trace:
+    authorizing_text: >
+      The provision that hands the agency its job, and how far that job
+      runs. Cited directly, not summarized.
+    stated_aim: >
+      What the agency says it is doing: preamble, stated rationale,
+      legislative history.
+    operative_reach: >
+      Who the rule's own wording actually covers, read on its own,
+      independent of the stated aim.
+    gap: >
+      Mismatch between the grant, the stated aim, and the operative reach.
+      No mismatch points to within the existing line. A mismatch that pulls
+      in a new class of actor points to redrawing the line.
+  open_question: >
+    Does this rulemaking sit inside the agency's authorizing text, or does
+    it redraw that line? Does it fire on a threshold/date or on an actor's
+    conduct?
+
+cross_reading:
+  stage: 3
+  runs_when: more than one rule applies to the same firm
+  reads:
+    - object comparison: do the rules target the same kind of fact (a
+      person's identity, a thing's makeup, a conduct condition), or
+      different kinds?
+    - design comparison: did each rule redraw its line in the same
+      direction (e.g. territorial reach to a nexus test), or differently?
+    - jurisdiction and licensing authority: which regulator, on what basis,
+      filed where, coordinated with the other regulator or not, and where
+      one filing can read badly to the other.
+  open_question: >
+    Reading the rules together, where does one regulator's basis for reach
+    interact with the other's, and what does that predict about who inside
+    the firm can see the whole picture?
+
+cost_layer:
+  stage: 4
+  types: []
+  variables: [distance from object, revenue share exposed, substitution available, prior positioning]
+  filled_by: the firm itself, from its own data
+  informed_by: stage 3, when it ran
+  scenarios: >
+    Named by condition, not by type. What the matrix looks like under each
+    branch a rule's own timeline can take.
+  open_question: >
+    Firm by firm: how far from the named object, how much revenue is
+    exposed, is substitution available, and is the firm already positioning
+    before any outcome is known?
+
+method_note:
+  statement: >
+    The frame is provisional. A case may expose a distinction that requires
+    revision of the shared vocabulary; the case is not required to fit a
+    pre-fixed taxonomy.

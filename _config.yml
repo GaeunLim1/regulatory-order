@@ -1,0 +1,20 @@
+title: Regulatory Order
+description: >-
+  A research site on export-control and national-security regulation, read through a fixed frame: what the rule names, what authority it claims, who carries exposure before any outcome is known, and where the outcome actually lands.
+lang: en
+
+baseurl: /regulatory-order
+url: https://gaeunlim1.github.io
+
+# GitHub Pages builds this with its own Jekyll. No Actions workflow required.
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+exclude:
+  - README.md
+  - docs/
+  - scripts/
+
+framework_version: "v1.0"
