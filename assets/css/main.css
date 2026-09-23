@@ -17,7 +17,7 @@
   --plate-sunk:  #E4DFD4;
   --ink:         #1B1F24;
   --ink-soft:    #2C3238;
-  --muted:       #5B6169;
+  --muted:       #4B515A;
   --rule:        #B4AFA3;
   --rule-faint:  #DBD6CB;
 
@@ -26,7 +26,7 @@
   --accent-strong: #2C4653;
   --accent-soft:   #D2DDE2;
   /* Caution only: unresolved points, scope limits, warnings. Rust, used rarely. */
-  --flag:        #B4532A;
+  --flag:        #9C4423;
   --flag-soft:   #ECD8CD;
 
   --display: "Source Serif 4", Georgia, serif;
@@ -1426,11 +1426,11 @@ details[open] > summary { margin-bottom: 0.6rem; }
 /* generic block scaffolding */
 .cov-block { margin-top: clamp(2.75rem, 6vw, 4.5rem); }
 .cov-block__head {
-  font: 700 0.84rem/1.2 var(--mono);
-  letter-spacing: 0.06em;
+  font: 700 1.05rem/1.25 var(--mono);
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--ink);
-  margin: 0 0 1.1rem;
+  margin: 0 0 1.25rem;
 }
 
 /* block 2 — trace-field signature (single link) */
