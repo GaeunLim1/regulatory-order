@@ -1,19 +1,16 @@
-# Master frame: traces a rule from the design intent behind it through
-# firm-level exposure to the point a company actually has to comply,
-# independent of whether implementation gets delayed or staged along the
-# way.
-#
-# Object of the rule and Convergence carry fixed types. Design Layer crosses
-# two independent axes. Cost Layer carries no types, a matrix of firm-level
-# variables, filled before any outcome is known.
+# Master frame. Stage 1-2 read a single rule. Stage 3 reads multiple rules
+# together, when more than one applies. Stage 4 turns the reading into an
+# exposure matrix, informed by Stage 3.
 
 object_of_the_rule:
+  stage: 1
   types: [attribute-based, relational, conduct-based]
   open_question: >
     What does the text name as its target: a measured attribute, a position
     in a network, or a future conduct condition?
 
 design_layer:
+  stage: 2
   axes:
     scope: [within the existing line, redrawing the line]
     trigger: [numeric, conduct]
@@ -36,34 +33,42 @@ design_layer:
     it redraw that line? Does it fire on a threshold/date or on an actor's
     conduct?
 
+cross_reading:
+  stage: 3
+  runs_when: more than one rule applies to the same firm
+  reads:
+    - object comparison: do the rules target the same kind of fact (a
+      person's identity, a thing's makeup, a conduct condition), or
+      different kinds?
+    - design comparison: did each rule redraw its line in the same
+      direction (e.g. territorial reach to a nexus test), or differently?
+    - jurisdiction and licensing authority: which regulator, on what basis,
+      filed where, coordinated with the other regulator or not, and where
+      one filing can read badly to the other.
+  open_question: >
+    Reading the rules together, where does one regulator's basis for reach
+    interact with the other's, and what does that predict about who inside
+    the firm can see the whole picture?
+
 cost_layer:
+  stage: 4
   types: []
   variables: [distance from object, revenue share exposed, substitution available, prior positioning]
+  filled_by: the firm itself, from its own data
+  informed_by: stage 3, when it ran
+  scenarios: >
+    Named by condition, not by type. What the matrix looks like under each
+    branch a rule's own timeline can take.
   open_question: >
     Firm by firm: how far from the named object, how much revenue is
     exposed, is substitution available, and is the firm already positioning
     before any outcome is known?
 
 convergence:
-  types: [direct hit, reallocation, amplification, diffusion]
-  conduct_trigger_only: [latent, conditional reinstatement]
-  test:
-    - scale proportional to the trigger?
-    - if proportional, does the landing point match the named target?
-  open_question: >
-    Reading the Cost Layer matrix against the two-question test above, which
-    type does the outcome fall into?
-  pre_landing: >
-    A type from this list is assigned only once the landing point is
-    observed. Before that, on a watchlist item, this layer stays pending;
-    if a forward look is useful, write it as a scenario against the Cost
-    Layer matrix (what changes under condition X), not as a type guessed in
-    advance.
+  status: reserved
 
 method_note:
   statement: >
     The frame is provisional. A case may expose a distinction that requires
     revision of the shared vocabulary; the case is not required to fit a
     pre-fixed taxonomy.
-
-# Closed-case construction set removed from the site. The working set is watchlist.

@@ -1,15 +1,15 @@
 ---
 layout: default
-title: Layers
+title: Master Frame
 permalink: /layers/
-description: The four layers of the master frame, each with its own type page.
+description: Four stages for reading export-control and national-security rules.
 ---
 
 <section class="hero">
   <div class="shell">
-    <span class="eyebrow eyebrow--accent">Master frame</span>
-    <h1>Layers</h1>
-    <p class="standfirst">It traces a rule from the design intent behind it through firm-level exposure to the point a company actually has to comply, independent of whether implementation gets delayed or staged along the way. Two layers carry fixed types. Object of the rule and Convergence classify: a case falls into one named type or another. Design Layer crosses two independent axes and traces the reading, not just the conclusion. Cost Layer carries no types; it is a matrix of firm-level variables, filled before any outcome is known.</p>
+    <span class="eyebrow eyebrow--accent">Master Frame</span>
+    <h1>Master Frame</h1>
+    <p class="standfirst">Stage 1 and 2 read a single rule: what it targets, and whether it sits inside or redraws the agency's authority. Stage 3 reads more than one rule together, when more than one applies to the same firm. Stage 4 turns the reading into a firm-level exposure matrix, informed by Stage 3.</p>
   </div>
 </section>
 
@@ -19,7 +19,7 @@ description: The four layers of the master frame, each with its own type page.
 
       <a class="layer-card" href="{{ '/layers/object-of-the-rule/' | relative_url }}">
         <span class="layer-card__num">01</span>
-        <h2>Object of the rule</h2>
+        <h2>Object of the Rule</h2>
         <p>What the text names as its target.</p>
         <div class="tag-row">
           <span class="tag">attribute-based</span>
@@ -40,27 +40,27 @@ description: The four layers of the master frame, each with its own type page.
         </div>
       </a>
 
-      <a class="layer-card" href="{{ '/layers/cost-layer/' | relative_url }}">
+      <a class="layer-card" href="{{ '/layers/cross-reading/' | relative_url }}">
         <span class="layer-card__num">03</span>
+        <h2>Cross-Reading</h2>
+        <p>Runs when more than one rule applies to the same firm.</p>
+        <div class="tag-row">
+          <span class="tag">object comparison</span>
+          <span class="tag">design comparison</span>
+          <span class="tag">jurisdiction &amp; licensing authority</span>
+        </div>
+      </a>
+
+      <a class="layer-card" href="{{ '/layers/cost-layer/' | relative_url }}">
+        <span class="layer-card__num">04</span>
         <h2>Cost Layer</h2>
-        <p>A matrix, not a type. Firm by firm, before the outcome.</p>
+        <p>A matrix, not a type. Filled by the firm, informed by Stage 3.</p>
         <div class="tag-row">
           <span class="tag tag--dash">no types, variables only</span>
         </div>
       </a>
 
-      <a class="layer-card" href="{{ '/layers/convergence/' | relative_url }}">
-        <span class="layer-card__num">04</span>
-        <h2>Convergence</h2>
-        <p>Where the Cost Layer matrix lands, classified.</p>
-        <div class="tag-row">
-          <span class="tag">direct hit</span>
-          <span class="tag">reallocation</span>
-          <span class="tag">amplification</span>
-          <span class="tag">diffusion</span>
-        </div>
-      </a>
-
     </div>
+    <p class="cbody" style="margin-top:1.4rem;">A fifth stage, Convergence, is reserved. See <code>_data/schema.yml</code>.</p>
   </div>
 </section>

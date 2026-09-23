@@ -18,7 +18,7 @@ description: "A framework for reading export-control and national-security rules
       <table class="dfour">
         <thead>
           <tr>
-            <th class="dfour__hk">Layer</th>
+            <th class="dfour__hk">Stage</th>
             <th class="dfour__hw">What</th>
             <th class="dfour__hn">When</th>
             <th class="dfour__hh">How</th>
@@ -26,7 +26,7 @@ description: "A framework for reading export-control and national-security rules
         </thead>
         <tbody>
           <tr>
-            <td class="dfour__k">Object of the rule</td>
+            <td class="dfour__k">Object of the Rule</td>
             <td class="dfour__v">What the text names as its target: an attribute (a threshold, a content share), a relation (a nationality, a contract chain), or a condition (a compliance behavior).</td>
             <td class="dfour__n">when this object is named in the text</td>
             <td class="dfour__h">Read from the official text of the article or rule.</td>
@@ -38,16 +38,16 @@ description: "A framework for reading export-control and national-security rules
             <td class="dfour__h">Checked against the authorizing statute for scope and trigger type.</td>
           </tr>
           <tr>
-            <td class="dfour__k">Cost Layer</td>
-            <td class="dfour__v">A matrix, not a label. For each firm inside the object's reach: distance from the named target, revenue share exposed, substitution available, prior positioning.</td>
-            <td class="dfour__n">any point before the outcome is known</td>
-            <td class="dfour__h">Filled firm by firm; no outcome required to complete it.</td>
+            <td class="dfour__k">Cross-Reading</td>
+            <td class="dfour__v">Runs when more than one rule applies to the same firm: object comparison, design comparison, and a reading of jurisdiction and licensing authority across both regulators.</td>
+            <td class="dfour__n">when a second rule applies</td>
+            <td class="dfour__h">Reads the two Stage 1 and 2 outputs together, not each in isolation.</td>
           </tr>
           <tr>
-            <td class="dfour__k">Convergence</td>
-            <td class="dfour__v">Reads the Cost Layer matrix and classifies: direct hit, reallocation, amplification, diffusion.</td>
-            <td class="dfour__n">after the mismatch surfaces</td>
-            <td class="dfour__h">Matched against scale-proportionality and landing-point rules, not narrated case by case.</td>
+            <td class="dfour__k">Cost Layer</td>
+            <td class="dfour__v">A matrix, not a label. For each firm inside the object's reach: distance from the named target, revenue share exposed, substitution available, prior positioning. Informed by Stage 3, when it ran.</td>
+            <td class="dfour__n">any point before the outcome is known</td>
+            <td class="dfour__h">Filled firm by firm; no outcome required to complete it.</td>
           </tr>
         </tbody>
       </table>
@@ -55,11 +55,11 @@ description: "A framework for reading export-control and national-security rules
 
     <!-- 3 · layers -->
     <div class="cov-block">
-      <p class="cov-block__head">Layers</p>
+      <p class="cov-block__head">Master Frame</p>
       <div class="layer-grid">
         <a class="layer-card" href="{{ '/layers/object-of-the-rule/' | relative_url }}">
           <span class="layer-card__num">01</span>
-          <h2>Object of the rule</h2>
+          <h2>Object of the Rule</h2>
           <p>What the text names as its target.</p>
           <div class="tag-row">
             <span class="tag">attribute-based</span>
@@ -78,36 +78,35 @@ description: "A framework for reading export-control and national-security rules
             <span class="tag">conduct trigger</span>
           </div>
         </a>
-        <a class="layer-card" href="{{ '/layers/cost-layer/' | relative_url }}">
+        <a class="layer-card" href="{{ '/layers/cross-reading/' | relative_url }}">
           <span class="layer-card__num">03</span>
-          <h2>Cost Layer</h2>
-          <p>A matrix, not a type. Firm by firm, before the outcome.</p>
+          <h2>Cross-Reading</h2>
+          <p>Runs when more than one rule applies to the same firm.</p>
           <div class="tag-row">
-            <span class="tag tag--dash">no types, variables only</span>
+            <span class="tag">object comparison</span>
+            <span class="tag">design comparison</span>
+            <span class="tag">jurisdiction &amp; licensing authority</span>
           </div>
         </a>
-        <a class="layer-card" href="{{ '/layers/convergence/' | relative_url }}">
+        <a class="layer-card" href="{{ '/layers/cost-layer/' | relative_url }}">
           <span class="layer-card__num">04</span>
-          <h2>Convergence</h2>
-          <p>Where the Cost Layer matrix lands, classified.</p>
+          <h2>Cost Layer</h2>
+          <p>A matrix, not a type. Filled by the firm, informed by Stage 3.</p>
           <div class="tag-row">
-            <span class="tag">direct hit</span>
-            <span class="tag">reallocation</span>
-            <span class="tag">amplification</span>
-            <span class="tag">diffusion</span>
+            <span class="tag tag--dash">no types, variables only</span>
           </div>
         </a>
       </div>
     </div>
 
-    <!-- watchlist -->
+    <!-- applied example -->
     <div class="cov-block">
-      <p class="cov-block__head">Watchlist</p>
+      <p class="cov-block__head">Applied Example</p>
       <div class="cov-cases">
-        <a class="cov-case" data-case="1" href="{{ '/watchlist/bis-affiliates-rule/' | relative_url }}">
-          <span class="cov-case__num">W01</span>
-          <span class="cov-case__name">BIS Affiliates Rule</span>
-          <span class="cov-case__note">effective Sept 29, 2025, stayed until Nov 10, 2026: delay not yet resolved, landing point not yet observable</span>
+        <a class="cov-case" data-case="1" href="{{ '/applied-example/' | relative_url }}">
+          <span class="cov-case__num">01</span>
+          <span class="cov-case__name">BIS Affiliates Rule &times; China Rare Earth Controls</span>
+          <span class="cov-case__note">the full frame applied to both rules and one hypothetical firm exposed to both</span>
           <span class="cov-case__go">&#8594;</span>
         </a>
       </div>
