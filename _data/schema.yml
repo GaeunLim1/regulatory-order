@@ -37,14 +37,16 @@ cross_reading:
   stage: 3
   runs_when: more than one rule applies to the same firm
   reads:
-    - object comparison: do the rules target the same kind of fact (a
-      person's identity, a thing's makeup, a conduct condition), or
-      different kinds?
-    - design comparison: did each rule redraw its line in the same
-      direction (e.g. territorial reach to a nexus test), or differently?
-    - jurisdiction and licensing authority: which regulator, on what basis,
-      filed where, coordinated with the other regulator or not, and where
-      one filing can read badly to the other.
+    - object comparison: >-
+        do the rules target the same kind of fact (a person's identity,
+        a thing's makeup, a conduct condition), or different kinds?
+    - design comparison: >-
+        did each rule redraw its line in the same direction (e.g.
+        territorial reach to a nexus test), or differently?
+    - jurisdiction and licensing authority: >-
+        which regulator, on what basis, filed where, coordinated with
+        the other regulator or not, and where one filing can read badly
+        to the other.
   open_question: >
     Reading the rules together, where does one regulator's basis for reach
     interact with the other's, and what does that predict about who inside
