@@ -10,21 +10,21 @@
    ========================================================================== */
 
 :root {
-  /* Ground: warm document stock, held a clear step off white so hairline
+  /* Ground: cool blueprint stock, held a clear step off white so hairline
      rules and traces sit on a calm field rather than glare. */
-  --paper:       #F3F0EA;
-  --plate:       #FAF8F4;
-  --plate-sunk:  #E4DFD4;
-  --ink:         #1B1F24;
-  --ink-soft:    #2C3238;
-  --muted:       #4B515A;
-  --rule:        #B4AFA3;
-  --rule-faint:  #DBD6CB;
+  --paper:       #EAEDF1;
+  --plate:       #F5F7F9;
+  --plate-sunk:  #DBE0E6;
+  --ink:         #171B21;
+  --ink-soft:    #2A313A;
+  --muted:       #535B65;
+  --rule:        #AAB2BC;
+  --rule-faint:  #D6DBE1;
 
   /* One accent. Muted blueprint teal, used for structure, traces, and links. */
-  --accent:        #3A5A6C;
-  --accent-strong: #2C4653;
-  --accent-soft:   #D2DDE2;
+  --accent:        #33566A;
+  --accent-strong: #274353;
+  --accent-soft:   #CBD8DF;
   /* Caution only: unresolved points, scope limits, warnings. Rust, used rarely. */
   --flag:        #9C4423;
   --flag-soft:   #ECD8CD;
@@ -1510,6 +1510,21 @@ details[open] > summary { margin-bottom: 0.6rem; }
 .cov-mech__num { font: 500 0.68rem/1 var(--mono); letter-spacing: 0.12em; color: var(--accent); }
 .cov-mech__name { font-family: var(--display); font-size: clamp(1.3rem, 1rem + 1.2vw, 1.65rem); }
 .cov-mech__note { color: var(--muted); font-size: 0.95rem; line-height: 1.5; }
+.cov-mech__shape {
+  margin-top: auto; padding-top: 0.7rem;
+  border-top: 1px solid var(--rule-faint);
+  font: 500 0.72rem/1.3 var(--mono); letter-spacing: 0.06em; color: var(--accent);
+}
+a.cov-mech { text-decoration: none; color: inherit; }
+a.cov-mech .cov-mech__item { transition: border-color 0.15s ease, background 0.15s ease; }
+a.cov-mech:hover .cov-mech__item { border-color: var(--accent); }
+a.cov-mech:focus-visible { outline: none; }
+a.cov-mech:focus-visible .cov-mech__item { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent-soft); }
+.cov-mech__item--soft { background: var(--plate); border-style: dashed; }
+.cov-mech__item--soft .cov-mech__shape { color: var(--muted); }
+.cov-mech__cue { margin: 0.4rem 0 0; font: 500 0.85rem/1.4 var(--body); }
+.cov-mech__cue a { color: var(--accent); text-decoration: none; }
+.cov-mech__cue a:hover { text-decoration: underline; }
 .cov-mech__arrow { align-self: center; color: var(--rule); font-size: 1.2rem; }
 @media (max-width: 639px) { .cov-mech__arrow { display: none; } }
 
