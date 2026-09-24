@@ -1515,16 +1515,8 @@ details[open] > summary { margin-bottom: 0.6rem; }
   border-top: 1px solid var(--rule-faint);
   font: 500 0.72rem/1.3 var(--mono); letter-spacing: 0.06em; color: var(--accent);
 }
-a.cov-mech { text-decoration: none; color: inherit; }
-a.cov-mech .cov-mech__item { transition: border-color 0.15s ease, background 0.15s ease; }
-a.cov-mech:hover .cov-mech__item { border-color: var(--accent); }
-a.cov-mech:focus-visible { outline: none; }
-a.cov-mech:focus-visible .cov-mech__item { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent-soft); }
 .cov-mech__item--soft { background: var(--plate); border-style: dashed; }
 .cov-mech__item--soft .cov-mech__shape { color: var(--muted); }
-.cov-mech__cue { margin: 0.4rem 0 0; font: 500 0.85rem/1.4 var(--body); }
-.cov-mech__cue a { color: var(--accent); text-decoration: none; }
-.cov-mech__cue a:hover { text-decoration: underline; }
 .cov-mech__arrow { align-self: center; color: var(--rule); font-size: 1.2rem; }
 @media (max-width: 639px) { .cov-mech__arrow { display: none; } }
 

@@ -14,55 +14,164 @@ description: "A framework for reading export-control and national-security rules
       <p class="cov-standfirst">The frame traces a rule from the intent behind its design to the point a firm actually has to comply, whether or not implementation is delayed, staged, or stayed along the way.</p>
     </div>
 
-    <!-- the frame, as one spine linking to The Frame -->
-    <a class="cov-mech" href="{{ '/frame/' | relative_url }}" aria-label="The four stages, read in full">
+    <!-- the frame, as a spine (summary; full detail follows below) -->
+    <div class="cov-mech" aria-label="The four stages">
 
-      <span class="cov-mech__item">
-        <span class="cov-mech__num">STAGE 01</span>
-        <span class="cov-mech__name">Object of the Rule</span>
-        <span class="cov-mech__note">What the text names as its target. Read from the article itself, before anything downstream.</span>
-        <span class="cov-mech__shape">attribute &middot; relational &middot; conduct</span>
-      </span>
-      <span class="cov-mech__arrow" aria-hidden="true">&#8594;</span>
-
-      <span class="cov-mech__item">
-        <span class="cov-mech__num">STAGE 02</span>
-        <span class="cov-mech__name">Design Layer</span>
-        <span class="cov-mech__note">Whether the rule stays inside the agency's authority or redraws the line, and what fires it.</span>
-        <span class="cov-mech__shape">scope &times; trigger</span>
-      </span>
-      <span class="cov-mech__arrow" aria-hidden="true">&#8594;</span>
-
-      <span class="cov-mech__item">
-        <span class="cov-mech__num">STAGE 03</span>
-        <span class="cov-mech__name">Cross-Reading</span>
-        <span class="cov-mech__note">Runs only when more than one rule reaches the same firm. Reads them together, not side by side.</span>
-        <span class="cov-mech__shape">object &middot; design &middot; jurisdiction</span>
-      </span>
-      <span class="cov-mech__arrow" aria-hidden="true">&#8594;</span>
-
-      <span class="cov-mech__item cov-mech__item--soft">
-        <span class="cov-mech__num">STAGE 04</span>
-        <span class="cov-mech__name">Cost Layer</span>
-        <span class="cov-mech__note">A per-firm matrix, filled before the outcome is known. It carries no fixed types: a label here would already be a result.</span>
-        <span class="cov-mech__shape">variables &times; scenarios</span>
-      </span>
-
-    </a>
-    <p class="cov-mech__cue"><a href="{{ '/frame/' | relative_url }}">Read the four stages in full &#8594;</a></p>
-
-    <!-- applied example -->
-    <div class="cov-block">
-      <p class="cov-block__head">Applied Example</p>
-      <div class="cov-cases">
-        <a class="cov-case" data-case="1" href="{{ '/applied-example/' | relative_url }}">
-          <span class="cov-case__num">01</span>
-          <span class="cov-case__name">BIS Affiliates Rule &times; China Rare Earth Controls</span>
-          <span class="cov-case__note">the full frame applied to both rules and one hypothetical firm exposed to both</span>
-          <span class="cov-case__go">&#8594;</span>
-        </a>
+      <div class="cov-mech__item">
+        <p class="cov-mech__num">STAGE 01</p>
+        <p class="cov-mech__name">Object of the Rule</p>
+        <p class="cov-mech__note">What the text names as its target. Read from the article itself, before anything downstream.</p>
+        <p class="cov-mech__shape">attribute &middot; relational &middot; conduct</p>
       </div>
+      <span class="cov-mech__arrow" aria-hidden="true">&#8594;</span>
+
+      <div class="cov-mech__item">
+        <p class="cov-mech__num">STAGE 02</p>
+        <p class="cov-mech__name">Design Layer</p>
+        <p class="cov-mech__note">Whether the rule stays inside the agency's authority or redraws the line, and what fires it.</p>
+        <p class="cov-mech__shape">scope &times; trigger</p>
+      </div>
+      <span class="cov-mech__arrow" aria-hidden="true">&#8594;</span>
+
+      <div class="cov-mech__item">
+        <p class="cov-mech__num">STAGE 03</p>
+        <p class="cov-mech__name">Cross-Reading</p>
+        <p class="cov-mech__note">Runs only when more than one rule reaches the same firm. Reads them together, not side by side.</p>
+        <p class="cov-mech__shape">object &middot; design &middot; jurisdiction</p>
+      </div>
+      <span class="cov-mech__arrow" aria-hidden="true">&#8594;</span>
+
+      <div class="cov-mech__item cov-mech__item--soft">
+        <p class="cov-mech__num">STAGE 04</p>
+        <p class="cov-mech__name">Cost Layer</p>
+        <p class="cov-mech__note">A per-firm matrix, filled before the outcome is known. It carries no fixed types: a label here would already be a result.</p>
+        <p class="cov-mech__shape">variables &times; scenarios</p>
+      </div>
+
     </div>
 
+  </div>
+</section>
+
+<section class="csection" id="stage-01">
+  <div class="chero__shell">
+    <p class="ceyebrow">Stage 1 &middot; Object of the Rule</p>
+    <p class="cbody">What the text names as its target. Read from the article itself, before anything downstream is considered.</p>
+    <table class="cgap">
+      <thead><tr><th>Type</th><th>Trigger</th><th>Example</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Attribute-based</td>
+          <td>A continuous value measured on the item itself: content share, ownership percentage, technical lineage.</td>
+          <td>0.1% rare-earth content; 50% ownership; U.S.-origin technology share of a foreign-made chip.</td>
+        </tr>
+        <tr>
+          <td>Relational</td>
+          <td>A position in a network: nationality, headquarters location, a contract chain.</td>
+          <td>Headquarters in Country Group D:5; a re-export clause running through a third-country buyer.</td>
+        </tr>
+        <tr>
+          <td>Conduct-based</td>
+          <td>A future behavior the text conditions on, not a present property.</td>
+          <td>A disciplinary commitment made as a condition of a suspended denial order.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="csection" id="stage-02">
+  <div class="chero__shell">
+    <p class="ceyebrow">Stage 2 &middot; Design Layer</p>
+    <p class="cbody">Not whether the rule existed before the case. Whether this rulemaking sits inside the agency's authorizing text, or redraws that line, and separately, what fires it.</p>
+    <p class="cbody" style="margin-top:1.4rem;"><b>Axis 1: scope of authority</b></p>
+    <table class="cgap">
+      <thead><tr><th>Type</th><th>Reading</th></tr></thead>
+      <tbody>
+        <tr><td>Within the existing line</td><td>The rulemaking moves inside the range already handed to the agency. Lower legal exposure once in force.</td></tr>
+        <tr><td>Redrawing the line</td><td>The rulemaking extends the agency's own reach: a new jurisdictional or definitional line, not a new number inside an old one.</td></tr>
+      </tbody>
+    </table>
+    <p class="cbody" style="margin-top:1.4rem;"><b>How the axis 1 reading is made</b></p>
+    <table class="cgap">
+      <thead><tr><th>Step</th><th>Reading</th></tr></thead>
+      <tbody>
+        <tr><td>Authorizing text</td><td>The provision that hands the agency its job, and how far that job runs. Cited directly, not summarized.</td></tr>
+        <tr><td>Stated aim</td><td>What the agency says it is doing: preamble, stated rationale, legislative history.</td></tr>
+        <tr><td>Reach of the operative text</td><td>Who the rule's own wording actually covers, read on its own, independent of what it says it is doing.</td></tr>
+        <tr><td>Gap</td><td>The mismatch between the first two and the third. No mismatch: within the existing line. A mismatch that pulls in a new class of actor: redrawing the line.</td></tr>
+      </tbody>
+    </table>
+    <p class="cbody" style="margin-top:1.4rem;"><b>Axis 2: trigger mechanism</b></p>
+    <table class="cgap">
+      <thead><tr><th>Type</th><th>Reading</th></tr></thead>
+      <tbody>
+        <tr><td>Numeric trigger</td><td>Fires on a threshold or a calendar date, independent of any actor's behavior.</td></tr>
+        <tr><td>Conduct trigger</td><td>Fires on a breach or a failure to perform a condition. Creates a latent interval between the breach and its detection that a numeric trigger cannot produce.</td></tr>
+      </tbody>
+    </table>
+    <p class="cbody" style="margin-top:1.4rem;"><b>The two axes, crossed</b></p>
+    <table class="cgap">
+      <thead><tr><th></th><th>Within the existing line</th><th>Redrawing the line</th></tr></thead>
+      <tbody>
+        <tr><td>Numeric trigger</td><td>Threshold adjusted inside existing scope.</td><td>New threshold extends jurisdiction itself.</td></tr>
+        <tr><td>Conduct trigger</td><td>Compliance condition added inside existing scope.</td><td>New conduct standard extends jurisdiction itself.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="csection" id="stage-03">
+  <div class="chero__shell">
+    <p class="ceyebrow">Stage 3 &middot; Cross-Reading</p>
+    <p class="cbody">Stage 1 and 2 read a single rule. This stage runs only when more than one rule applies to the same firm, and reads them together rather than side by side.</p>
+    <p class="cbody" style="margin-top:1.4rem;"><b>Object comparison</b></p>
+    <p class="cbody">Do the rules target the same kind of fact, or different kinds: a person's identity, a thing's makeup, a conduct condition. The object type predicts which part of the firm can see it first: a person-type object routes to legal and ownership diligence, a thing-type object routes to supply-chain and technical diligence. Different object types mean the two readings sit in different departments by default.</p>
+    <p class="cbody" style="margin-top:1.4rem;"><b>Design comparison</b></p>
+    <p class="cbody">Did each rule redraw its line in the same direction, or differently. Two rules can move from territorial reach to a nexus test independently of each other, for unrelated stated reasons, and still end up catching the same third-country firm through separate paths. The comparison is not whether the rules coordinate; usually they do not.</p>
+    <p class="cbody" style="margin-top:1.4rem;"><b>Jurisdiction and licensing authority</b></p>
+    <table class="cgap">
+      <thead><tr><th>Question</th><th>Reading</th></tr></thead>
+      <tbody>
+        <tr><td>Regulator</td><td>Which agency administers each rule.</td></tr>
+        <tr><td>Basis for reach</td><td>What fact gives that regulator jurisdiction over this firm.</td></tr>
+        <tr><td>Filed where</td><td>Where a license or disclosure under each rule is actually submitted.</td></tr>
+        <tr><td>Coordination</td><td>Whether the two regulators coordinate with each other. Usually they do not.</td></tr>
+        <tr><td>Cross-read risk</td><td>Where a filing made to satisfy one regulator can read badly to the other.</td></tr>
+      </tbody>
+    </table>
+    <p class="cbody" style="margin-top:1.1rem;"><a href="{{ '/applied-example/cross-reading-checklist/' | relative_url }}">Cross-Reading, worked as a checklist against Firm X &#8594;</a></p>
+  </div>
+</section>
+
+<section class="csection" id="stage-04">
+  <div class="chero__shell">
+    <p class="ceyebrow">Stage 4 &middot; Cost Layer</p>
+    <p class="cbody">It carries no fixed types. A label here would already be a result, and results are not available before a case closes. This layer is a matrix of variables that can be filled at any point, including before the outcome is known. It is informed by Stage 3, when more than one rule applies.</p>
+    <table class="cgap">
+      <thead><tr><th>Variable</th><th>Reading</th></tr></thead>
+      <tbody>
+        <tr><td>Distance from object</td><td>Direct target, first-tier supplier or counterparty, or a third party with only an indirect interest.</td></tr>
+        <tr><td>Revenue share exposed</td><td>Share of that firm's revenue running through the named object.</td></tr>
+        <tr><td>Substitution available</td><td>Whether the firm can route around the object: an alternate customer, supplier, or market.</td></tr>
+        <tr><td>Prior positioning</td><td>Whether the firm is already acting on the object before any outcome: stockpiling, contract renegotiation, license applications filed and pending.</td></tr>
+      </tbody>
+    </table>
+    <p class="cbody" style="margin-top:1.4rem;"><b>Scenarios</b></p>
+    <p class="cbody">Named by condition, not by type: what the matrix looks like under each branch a rule's own timeline can take. When more than one rule applies, the branches cross.</p>
+  </div>
+</section>
+
+<section class="csection">
+  <div class="chero__shell">
+    <p class="cov-block__head">Applied Example</p>
+    <div class="cov-cases">
+      <a class="cov-case" data-case="1" href="{{ '/applied-example/' | relative_url }}">
+        <span class="cov-case__num">01</span>
+        <span class="cov-case__name">BIS Affiliates Rule &times; China Rare Earth Controls</span>
+        <span class="cov-case__note">the full frame applied to both rules and one hypothetical firm exposed to both</span>
+        <span class="cov-case__go">&#8594;</span>
+      </a>
+    </div>
   </div>
 </section>
